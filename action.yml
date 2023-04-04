@@ -9,7 +9,7 @@ outputs:
   num_squared:
     value: ${{ steps.get-square.outputs.num_squared }}
 runs:
-  using: 'composite'
+  using: 'python'
   steps:
     - name: Install python
       uses: actions/setup-python@v4
