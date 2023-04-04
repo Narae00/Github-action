@@ -4,15 +4,16 @@ on: [push]
 jobs:
   get-num-square:
     runs-on: ubuntu-latest
-    name: return the number square
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: fetch num squared
-        id: get_square
-        uses: ./
-        with:
-          num: 11
-      - name: print the square
-        run: echo"{{ steps.get_sqaure.outputs.num_squared }}"
+      steps:
+       - name: Checkout
+         uses: actions/checkout@v2
+       - name: Setup Python
+         uses: actions/setup-python@v3.1.3
+       - name: fetch num squared
+         id: get_square
+         uses: ./
+         with:
+           num: 11
+       - name: print the square
+         run: echo"{{ steps.get_square.outputs.num_squared }}"
         
