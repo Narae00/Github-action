@@ -4,7 +4,7 @@ description: 'A Github Action takes number and return squared number'
 inputs:
   num:
     required: true
-    default : "Null"
+    default : "1"
 outputs:
   num_squared:
     value: ${{ steps.get-square.outputs.num_squared }}
