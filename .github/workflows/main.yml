@@ -10,7 +10,7 @@ jobs:
        - name: Setup Python
          uses: actions/setup-python@v3
        - name: Run Python script
-         run: python src/get_num_square.py
+         run: python ./src/get_num_square.py
        - name: fetch num squared
          id: get_square
          uses: ./
