@@ -19,7 +19,10 @@ runs:
       run: pip install -r requirements.txt
       shell: bash
     - name: Pass inputs to shell
-      run:
-      echo "INPUT_NUM=${{inputs.num}}" >> $GITHUB_ENV
+      run:|
+        echo "INPUT_NUM=${{inputs.num}}" >> $GITHUB_ENV
       shell: bash
-    - name: Fetch the number'
+    - name: Fetch the number's square
+      id: get-square
+      run: python src/get_num_sqaure.py
+      shell: bash
