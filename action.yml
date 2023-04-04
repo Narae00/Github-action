@@ -20,6 +20,6 @@ runs:
      shell: bash
     -name: Pass inputs to shell
      run:
-      echo "INPUT_NUM=${{inputs.num}}" >> $GITHUB_E
+      echo "INPUT_NUM=${{inputs.num}}" >> $GITHUB_ENV
      shell: bash
     -name: Fetch the number'
