@@ -11,15 +11,15 @@ outputs:
 runs:
   using: 'composite'
   steps:
-    -name: Install python
-    uses: actions/setup-python@v4
-    with:
-      python-version: '3.10'
-    -name: Install dependencies
-     run: pip install -r requirements.txt
-     shell: bash
-    -name: Pass inputs to shell
-     run:
+    - name: Install python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+      shell: bash
+    - name: Pass inputs to shell
+      run:
       echo "INPUT_NUM=${{inputs.num}}" >> $GITHUB_ENV
-     shell: bash
-    -name: Fetch the number'
+      shell: bash
+    - name: Fetch the number'
