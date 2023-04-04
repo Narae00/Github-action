@@ -7,7 +7,7 @@ if num:
   except Exception:
     exit()
 else:
-  num = 1
+  num = Null
   
   
 print(f"::set-output name=num_squared::{num**2}")
