@@ -15,3 +15,4 @@ jobs:
           num: 11
       - name: print the square
         run: echo"{{ steps.get_sqaure.outputs.num_squared }}"
+        
