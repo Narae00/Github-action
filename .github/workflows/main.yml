@@ -8,11 +8,11 @@ jobs:
     steps:
        - name: Checkout
          uses: actions/checkout@v2
-       - name: fetch num squared
+       - name: Fetch num squared
          id: get_square
          uses: ./src/get_num_square.py
          with:
            num: 11
        - name: Print the square
-         run: echo"{{ steps.get_square.outputs.num_squared }}"
+         run: echo "${{ steps.get_square.outputs.num_squared }}"
         
